@@ -1,6 +1,9 @@
 package com.scorestable.restapi.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 @Entity
@@ -11,10 +14,19 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull(message = "Team A is required")
+    @Size(min = 1, max = 50, message = "Team A must have between 1 and 50 characters")
     private String teamA;
+
+    @NotNull(message = "Team B is required")
+    @Size(min = 1, max = 50, message = "Team B must have between 1 and 50 characters")
     private String teamB;
-    private int scoreA;
-    private int scoreB;
+
+    @NotNull(message = "Score A is required")
+    private Integer scoreA;
+
+    @NotNull(message = "Score B is required")
+    private Integer scoreB;
 
     public Match() {
     }

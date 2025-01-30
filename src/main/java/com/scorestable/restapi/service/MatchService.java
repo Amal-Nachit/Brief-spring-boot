@@ -1,4 +1,4 @@
-package com.scorestable.restapi;
+package com.scorestable.restapi.service;
 
 import com.scorestable.restapi.model.Match;
 import com.scorestable.restapi.repository.MatchRepository;

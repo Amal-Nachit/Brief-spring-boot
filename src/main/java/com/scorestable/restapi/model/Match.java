@@ -1,4 +1,4 @@
-package com.scorestable.restapi;
+package com.scorestable.restapi.model;
 
 import jakarta.persistence.*;
 import java.util.Objects;
